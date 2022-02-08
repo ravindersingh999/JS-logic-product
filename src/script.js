@@ -1,40 +1,45 @@
-const arrProduct = [];
+arr = [];
 
-function addProduct() {
-    var id = document.getElementById("pid").value;
-    var name = document.getElementById("pname").value;
-    var price = document.getElementById("price").value;
+function addData() {
+    var id = document.getElementById('pid').value;
+    var name = document.getElementById('pname').value;
+    var price = document.getElementById('pprice').value;
 
-    if (isNaN(price)) {
-        document.getElementById('error').style.display = "block";
-        document.getElementById('error').innerHTML = '*Enter numeric value in price.'
-        return;
-    }
+    console.log(id, name, price);
 
-    if (id && name && price) {
-        document.getElementById('error').style.display = "none";
-        arrProduct.push({ id: id, name: name, price: price });
-        addElement(arrProduct);
-    } else {
+    data(id, price, name);
+    display(arr);
 
-        document.getElementById('error').style.display = "block";
-        document.getElementById('error').innerHTML = '*Please fill all the details.'
-    }
 }
 
-function addElement(arr) {
-    var table =
-        "<table> <tr><th>Product Id</th><th>Product Name</th><th>Price</th></tr> ";
-    for (let i = 0; i < arr.length; i++) {
-        console.log(arr[i]);
-        table +=
-            "<tr><td>" +
-            arr[i].id +
-            "</td><td>" +
-            arr[i].name +
-            "</td><td>" +
-            `Rs. ${arr[i].price}` +
-            "</td></tr>";
+function data(id, name, price) {
+    for (var i = 0; i < arr.length; i++) {
+        // console.log(arr[i]);
+        if (arr[i].ID == id) {
+            alert("Already exist");
+            return;
+        }
     }
-    document.getElementById("product").innerHTML = table + "</table>";
+    product = {};
+    product["ID"] = id;
+    product["NAME"] = price;
+    product["PRICE"] = price;
+    arr.push(product);
+
+}
+
+function display(result) {
+    var text = document.getElementById("table");
+    text.innerHTML = "<tr>\
+    <th>Product ID</th>\
+    <th>Product Name</th>\
+    <th>Product Price</th>\
+    </tr>"
+    for (let i = 0; i < result.length; i++) {
+        text.innerHTML += '<tr>\
+        <td>' + result[i].ID + '</td>\
+        <td>' + result[i].NAME + '</td>\
+        <td>' + result[i].PRICE + '</td>\
+        </tr>';
+    }
 }

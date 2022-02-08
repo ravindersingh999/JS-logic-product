@@ -1,40 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Product Table</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Document</title>
 </head>
-
 <body>
-    <div id="wrapper">
-        <form>
-            <label for="pid"> Product Id
-                <input id="pid" class="formElement" type="text"/></label>
+    <form>
+        <label for="pid">Product ID <input type="text" id="pid"></label>
+        <br>
+        <label for="pname">Product Name <input type="text" id="pname"></label>
+        <br>
+        <label for="pprice">Product Price  <input type="text" id="pprice"></label>
+        <br>
 
-            <label for="pname">Product Name
-                <input id="pname" class="formElement" type="text"/></label>
+        <input type="button" value="ADD PRODUCT" onclick="addData()">
+        <br><br>
+    </form>
 
-            <label for="price">Product Price
-                <input id="price" class="formElement" type="text"/></label>
+    <table id="table"></table>
 
-            <input type="button" class="btn" onclick="addProduct()" value="ADD PRODUCT" />
-        </form>
-        <p id="error"></p>
-        <div id="product">
-            <table>
-                <tr>
-                    <th>Product Id</th>
-                    <th>Product Name</th>
-                    <th>Price</th>
-                </tr>
-            </table>
-        </div>
-    </div>
-    <script src="script.js"></script>
+    <script src="/script.js"></script>
 </body>
-
 </html>

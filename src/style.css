@@ -1,43 +1,28 @@
+form label{
+  display: block;
+}
 form {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 40%;
-    font-size: 1.5em;
-  }
-  
-  form > label {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    margin: 10px 0px;
-  }
-  
-  .formElement {
-    height: 40px;
-    width: 50%;
-  }
-  
-  .btn {
-    margin-top: 30px;
-    height: 50px;
-    width: 40%;
-    font-size: 15px;
-    font-weight: bold;
-    margin-left: 10px;
-  }
-  
-  #error {
-    color: red;
-    margin: 30px;
-  }
-  table {
-    font-size: large;
-    width: 50%;
-    margin-top: 70px;
-    text-align: center;
-  }
-  
-td,th {
-    padding: 20px;
-  }
+  margin-left: 100px;
+  font-size: 20px;
+}
+#pid,#pname,#pprice{
+  padding: 10px 20px 5px 5px;
+}
+#pid{
+  margin-left: 50px;
+}
+#pname{
+  margin-left: 23px;
+}
+#pprice{
+  margin-left: 32px;
+}
+form button{
+  font-size: 15px ;
+}
+#table{
+  margin-left: 100px;
+}
+#table th,td{
+  padding: 15px;
+}
